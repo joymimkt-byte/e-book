@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>As Profissões da Internet - Como Pessoas Comuns Estão Trabalhando Online</title>
+    <meta name="description" content="Descubra as profissões reais do mercado digital, entenda como elas funcionam na prática e encontre o caminho ideal para você trabalhar online.">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="As Profissões da Internet - Como Pessoas Comuns Estão Trabalhando Online">
+    <meta property="og:description" content="Um mapa claro do mercado digital para você começar do zero, sem promessas falsas.">
+    <meta property="og:image" content="https://picsum.photos/seed/digital-work/1200/630">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Sora', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            black: '#0B0B0F',
+                            pink: '#FF2E88',
+                            pinkLight: '#ff6eb0',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #0B0B0F;
+            color: white;
+            -webkit-font-smoothing: antialiased;
+        }
+        .glow-pink {
+            box-shadow: 0 0 20px rgba(255, 46, 136, 0.4);
+        }
+        .glow-pink:hover {
+            box-shadow: 0 0 30px rgba(255, 46, 136, 0.6);
+        }
+        .faq-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .faq-item.active .faq-content {
+            max-height: 200px;
+        }
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in {
+            animation: fadeIn 0.6s ease-out forwards;
+        }
+        .selection-pink::selection {
+            background-color: rgba(255, 46, 136, 0.3);
+        }
+    </style>
+</head>
+<body class="selection-pink">
+
+    <!-- Sticky CTA Mobile -->
+    <div class="md:hidden fixed bottom-0 left-0 right-0 z-50 p-4 bg-[#0B0B0F]/90 backdrop-blur-xl border-t border-white/10 flex items-center justify-between gap-4">
+        <div>
+            <p class="text-[10px] uppercase tracking-widest text-white/50 font-semibold">Acesso Imediato</p>
+            <p class="text-xl font-bold text-brand-pink">R$ 25</p>
+        </div>
+        <div class="flex-1">
+            <a onclick="return false;" href="https://pay.hotmart.com/E104617471T?checkoutMode=2" class="hotmart-fb hotmart__button-checkout block w-full py-3 px-4 text-center font-bold text-white bg-brand-pink rounded-xl text-sm active:scale-95 transition-transform">
+                Comprar Agora
+            </a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <header class="relative overflow-hidden pt-20 pb-16 md:pt-32 md:pb-32 px-4">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-[500px] bg-brand-pink/10 blur-[120px] rounded-full -z-10"></div>
+        
+        <div class="max-w-4xl mx-auto text-center animate-fade-in">
+            <span class="inline-block px-4 py-1.5 mb-6 rounded-full border border-brand-pink/30 bg-brand-pink/5 text-brand-pink text-xs font-bold uppercase tracking-[0.2em]">
+                Ebook Digital
+            </span>
+            <h1 class="text-4xl md:text-7xl font-extrabold tracking-tight mb-6 leading-[1.1]">
+                As Profissões da <br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-pink to-brand-pinkLight">
+                    Internet
+                </span>
+            </h1>
+            <p class="text-xl md:text-2xl text-white/80 font-medium mb-8">
+                Como Pessoas Comuns Estão Trabalhando Online
+            </p>
+            
+            <div class="max-w-2xl mx-auto mb-12 space-y-4">
+                <p class="text-lg text-white/60 leading-relaxed">
+                    Trabalhar pela internet não é “virar influencer”. <br class="hidden md:block">
+                    É entender quais profissões existem, como elas funcionam na prática, e qual combina com você.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-4 max-w-2xl mx-auto mb-12 text-left">
+                <div class="flex items-start gap-3 p-4 rounded-2xl bg-white/5 border border-white/10">
+                    <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-pink shrink-0 mt-0.5"></i>
+                    <p class="text-sm text-white/80 font-medium">Um mapa claro do mercado digital (sem confusão e sem “gurus”)</p>
+                </div>
+                <div class="flex items-start gap-3 p-4 rounded-2xl bg-white/5 border border-white/10">
+                    <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-pink shrink-0 mt-0.5"></i>
+                    <p class="text-sm text-white/80 font-medium">Profissões reais, com prós e contras</p>
+                </div>
+                <div class="flex items-start gap-3 p-4 rounded-2xl bg-white/5 border border-white/10">
+                    <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-pink shrink-0 mt-0.5"></i>
+                    <p class="text-sm text-white/80 font-medium">Ferramentas mais usadas em cada área</p>
+                </div>
+                <div class="flex items-start gap-3 p-4 rounded-2xl bg-white/5 border border-white/10">
+                    <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-pink shrink-0 mt-0.5"></i>
+                    <p class="text-sm text-white/80 font-medium">Caminhos possíveis para começar mesmo do zero</p>
+                </div>
+            </div>
+
+            <div class="mb-8">
+                <div class="flex items-center justify-center gap-4 mb-6 text-sm font-semibold text-white/50">
+                    <span class="flex items-center gap-1.5"><i data-lucide="file-text" class="w-4 h-4"></i> PDF</span>
+                    <span class="w-1 h-1 rounded-full bg-white/20"></span>
+                    <span class="flex items-center gap-1.5"><i data-lucide="zap" class="w-4 h-4"></i> Acesso imediato</span>
+                    <span class="w-1 h-1 rounded-full bg-white/20"></span>
+                    <span class="text-white font-bold text-lg">R$ 25</span>
+                </div>
+                
+                <div class="flex justify-center w-full">
+                    <a onclick="return false;" href="https://pay.hotmart.com/E104617471T?checkoutMode=2" class="hotmart-fb hotmart__button-checkout group relative inline-flex items-center justify-center px-10 py-5 font-extrabold text-white transition-all duration-300 bg-gradient-to-r from-brand-pink to-brand-pinkLight rounded-2xl glow-pink hover:-translate-y-1 active:translate-y-0 w-full md:w-auto text-lg md:text-xl">
+                        <span class="relative flex items-center gap-2">
+                            Quero meu ebook agora
+                            <i data-lucide="arrow-right" class="w-6 h-6 group-hover:translate-x-1 transition-transform"></i>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Pain Points Section -->
+    <section class="py-20 px-4 bg-white/[0.02]">
+        <div class="max-w-3xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4">Se você está aqui, provavelmente…</h2>
+                <p class="text-white/50">Você provavelmente já pensou (ou já te falaram):</p>
+            </div>
+            
+            <div class="space-y-4 mb-12">
+                <div class="p-5 rounded-2xl bg-white/5 border-l-4 border-brand-pink italic text-white/80">“Eu já comprei curso e não deu certo.”</div>
+                <div class="p-5 rounded-2xl bg-white/5 border-l-4 border-brand-pink italic text-white/80">“Eu não sei por onde começar.”</div>
+                <div class="p-5 rounded-2xl bg-white/5 border-l-4 border-brand-pink italic text-white/80">“Eu vejo gente trabalhando online, mas não entendo o que elas fazem.”</div>
+                <div class="p-5 rounded-2xl bg-white/5 border-l-4 border-brand-pink italic text-white/80">“Eu não quero aparecer, mas queria uma forma real de trabalhar na internet.”</div>
+                <div class="p-5 rounded-2xl bg-white/5 border-l-4 border-brand-pink italic text-white/80">“Eu só queria um caminho mais claro, sem enrolação.”</div>
+            </div>
+
+            <div class="text-center">
+                <p class="text-xl font-bold text-brand-pink">Esse ebook é exatamente pra isso: clareza.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- What it is Section -->
+    <section class="py-24 px-4">
+        <div class="max-w-4xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold mb-8">O que este ebook é</h2>
+                    <p class="text-lg text-white/70 mb-8">Um guia direto e organizado para você entender:</p>
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-3">
+                            <div class="w-6 h-6 rounded-full bg-brand-pink/20 flex items-center justify-center shrink-0">
+                                <div class="w-2 h-2 rounded-full bg-brand-pink"></div>
+                            </div>
+                            <span class="text-white/80 font-medium">Quais são as profissões da internet</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <div class="w-6 h-6 rounded-full bg-brand-pink/20 flex items-center justify-center shrink-0">
+                                <div class="w-2 h-2 rounded-full bg-brand-pink"></div>
+                            </div>
+                            <span class="text-white/80 font-medium">O que cada uma faz no dia a dia</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <div class="w-6 h-6 rounded-full bg-brand-pink/20 flex items-center justify-center shrink-0">
+                                <div class="w-2 h-2 rounded-full bg-brand-pink"></div>
+                            </div>
+                            <span class="text-white/80 font-medium">O que você precisa pra começar</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <div class="w-6 h-6 rounded-full bg-brand-pink/20 flex items-center justify-center shrink-0">
+                                <div class="w-2 h-2 rounded-full bg-brand-pink"></div>
+                            </div>
+                            <span class="text-white/80 font-medium">Onde estão as oportunidades</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <div class="w-6 h-6 rounded-full bg-brand-pink/20 flex items-center justify-center shrink-0">
+                                <div class="w-2 h-2 rounded-full bg-brand-pink"></div>
+                            </div>
+                            <span class="text-white/80 font-medium">O que dá certo (e o que faz a maioria se perder)</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="p-8 rounded-3xl bg-gradient-to-br from-white/10 to-transparent border border-white/10 relative">
+                    <div class="absolute -top-6 -right-6 w-24 h-24 bg-brand-pink/20 blur-2xl rounded-full"></div>
+                    <p class="text-xl font-medium leading-relaxed italic text-white/90">
+                        "Você não vai sair “formado”. <br>
+                        Você vai sair orientado — com visão de mercado e direção."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chapters Section -->
+    <section class="py-24 px-4 bg-white/[0.02]">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">O que você vai encontrar aqui <span class="text-white/40 block text-lg font-normal mt-2">(visão por capítulos)</span></h2>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="space-y-8">
+                    <div class="p-6 rounded-2xl bg-white/5 border border-white/10">
+                        <h3 class="text-brand-pink font-bold mb-4 flex items-center gap-2"><i data-lucide="book-open" class="w-5 h-5"></i> Introdução</h3>
+                        <ul class="space-y-2 text-sm text-white/60">
+                            <li>• Por que tanta gente quer trabalhar online — e por que a maioria se perde</li>
+                            <li>• A verdade sobre trabalhar pela internet (sem glamour)</li>
+                        </ul>
+                    </div>
+
+                    <div class="p-6 rounded-2xl bg-white/5 border border-white/10">
+                        <h3 class="text-brand-pink font-bold mb-4 flex items-center gap-2"><i data-lucide="target" class="w-5 h-5"></i> Entendendo o mercado</h3>
+                        <ul class="space-y-2 text-sm text-white/60">
+                            <li>• Os 3 perfis do digital: prestador de serviço, criador e vendedor</li>
+                        </ul>
+                    </div>
+
+                    <div class="p-6 rounded-2xl bg-white/5 border border-white/10">
+                        <h3 class="text-brand-pink font-bold mb-4 flex items-center gap-2"><i data-lucide="monitor" class="w-5 h-5"></i> Profissões de serviço</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-[11px] font-bold uppercase tracking-wider">Social Media</span>
+                            <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-[11px] font-bold uppercase tracking-wider">Designer / Canva</span>
+                            <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-[11px] font-bold uppercase tracking-wider">Editor de vídeo</span>
+                            <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-[11px] font-bold uppercase tracking-wider">Copywriter</span>
+                            <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-[11px] font-bold uppercase tracking-wider">Web Designer</span>
+                            <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-[11px] font-bold uppercase tracking-wider">SEO</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-8">
+                    <div class="p-6 rounded-2xl bg-white/5 border border-white/10">
+                        <h3 class="text-brand-pink font-bold mb-4 flex items-center gap-2"><i data-lucide="zap" class="w-5 h-5"></i> Modelos de venda</h3>
+                        <ul class="space-y-2 text-sm text-white/60">
+                            <li>• Afiliados (o que é real e o que é mito)</li>
+                            <li>• Produtos físicos (Shopee/Mercado Livre)</li>
+                            <li>• Loja própria (Nuvemshop e similares)</li>
+                        </ul>
+                    </div>
+
+                    <div class="p-6 rounded-2xl bg-white/5 border border-white/10">
+                        <h3 class="text-brand-pink font-bold mb-4 flex items-center gap-2"><i data-lucide="smartphone" class="w-5 h-5"></i> Audiência e influência</h3>
+                        <ul class="space-y-2 text-sm text-white/60">
+                            <li>• Influencer (a realidade)</li>
+                            <li>• Programas de influencer (TikTok Shop, Mercado Livre etc.)</li>
+                            <li>• TikTok como ferramenta de venda</li>
+                            <li>• Instagram: visibilidade x monetização</li>
+                        </ul>
+                    </div>
+
+                    <div class="p-6 rounded-2xl bg-white/5 border border-white/10">
+                        <h3 class="text-brand-pink font-bold mb-4 flex items-center gap-2"><i data-lucide="arrow-right" class="w-5 h-5"></i> Tráfego e Vendas</h3>
+                        <ul class="space-y-2 text-sm text-white/60">
+                            <li>• Gestor de tráfego (Meta Ads e Google Ads)</li>
+                            <li>• O vendedor digital (capítulo especial)</li>
+                            <li>• Vendas online, SDR, comissão, atendimento e fechamento</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 p-6 rounded-2xl bg-brand-pink/5 border border-brand-pink/20 text-center">
+                <h3 class="text-brand-pink font-bold mb-2">Conclusão</h3>
+                <p class="text-sm text-white/70">O futuro dessas profissões e como escolher seu caminho com consciência</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professions Cards Section -->
+    <section class="py-24 px-4">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-16">Profissões abordadas <span class="text-brand-pink">(Prós x Contras)</span></h2>
+            
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Social Media -->
+                <div class="p-6 rounded-3xl bg-white/5 border border-white/10 hover:border-brand-pink/50 transition-colors group">
+                    <h3 class="text-xl font-bold mb-6 group-hover:text-brand-pink transition-colors">Social Media</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <p class="text-[10px] font-bold uppercase tracking-widest text-emerald-400 mb-2">Prós</p>
+                            <p class="text-sm text-white/70 leading-relaxed">demanda alta, começo rápido, trabalha remoto</p>
+                        </div>
+                        <div class="pt-4 border-t border-white/5">
+                            <p class="text-[10px] font-bold uppercase tracking-widest text-rose-400 mb-2">Contras</p>
+                            <p class="text-sm text-white/70 leading-relaxed">prazos, criatividade constante, cliente cobra resultado</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Designer -->
+                <div class="p-6 rounded-3xl bg-white/5 border border-white/10 hover:border-brand-pink/50 transition-colors group">
+                    <h3 class="text-xl font-bold mb-6 group-hover:text-brand-pink transition-colors">Designer/Canva</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <p class="text-[10px] font-bold uppercase tracking-widest text-emerald-400 mb-2">Prós</p>
+                            <p class="text-sm text-white/70 leading-relaxed">fácil começar, portfólio rápido, serviço recorrente</p>
+                        </div>
+                        <div class="pt-4 border-t border-white/5">
+                            <p class="text-[10px] font-bold uppercase tracking-widest text-rose-400 mb-2">Contras</p>
+                            <p class="text-sm text-white/70 leading-relaxed">revisão, senso estético, cliente subestima</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Editor -->
+                <div class="p-6 rounded-3xl bg-white/5 border border-white/10 hover:border-brand-pink/50 transition-colors group">
+                    <h3 class="text-xl font-bold mb-6 group-hover:text-brand-pink transition-colors">Editor de vídeo (CapCut)</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <p class="text-[10px] font-bold uppercase tracking-widest text-emerald-400 mb-2">Prós</p>
+                            <p class="text-sm text-white/70 leading-relaxed">mercado gigante, dá pra começar no celular, não precisa aparecer</p>
+                        </div>
+                        <div class="pt-4 border-t border-white/5">
+                            <p class="text-[10px] font-bold uppercase tracking-widest text-rose-400 mb-2">Contras</p>
+                            <p class="text-sm text-white/70 leading-relaxed">prazo curto, muitas revisões, tempo de tela alto</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Web Designer -->
+                <div class="p-6 rounded-3xl bg-white/5 border border-white/10 hover:border-brand-pink/50 transition-colors group">
+                    <h3 class="text-xl font-bold mb-6 group-hover:text-brand-pink transition-colors">Web Designer</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <p class="text-[10px] font-bold uppercase tracking-widest text-emerald-400 mb-2">Prós</p>
+                            <p class="text-sm text-white/70 leading-relaxed">ticket maior, muita demanda, manutenção gera recorrência</p>
+                        </div>
+                        <div class="pt-4 border-t border-white/5">
+                            <p class="text-[10px] font-bold uppercase tracking-widest text-rose-400 mb-2">Contras</p>
+                            <p class="text-sm text-white/70 leading-relaxed">bugs/hospedagem, ajustes finais, curva técnica</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- SEO -->
+                <div class="p-6 rounded-3xl bg-white/5 border border-white/10 hover:border-brand-pink/50 transition-colors group">
+                    <h3 class="text-xl font-bold mb-6 group-hover:text-brand-pink transition-colors">SEO</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <p class="text-[10px] font-bold uppercase tracking-widest text-emerald-400 mb-2">Prós</p>
+                            <p class="text-sm text-white/70 leading-relaxed">valorizado, remoto, crescimento consistente</p>
+                        </div>
+                        <div class="pt-4 border-t border-white/5">
+                            <p class="text-[10px] font-bold uppercase tracking-widest text-rose-400 mb-2">Contras</p>
+                            <p class="text-sm text-white/70 leading-relaxed">resultado demora, exige paciência e análise</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Afiliados -->
+                <div class="p-6 rounded-3xl bg-white/5 border border-white/10 hover:border-brand-pink/50 transition-colors group">
+                    <h3 class="text-xl font-bold mb-6 group-hover:text-brand-pink transition-colors">Afiliados</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <p class="text-[10px] font-bold uppercase tracking-widest text-emerald-400 mb-2">Prós</p>
+                            <p class="text-sm text-white/70 leading-relaxed">baixa estrutura, aprende vendas/marketing, escala possível</p>
+                        </div>
+                        <div class="pt-4 border-t border-white/5">
+                            <p class="text-[10px] font-bold uppercase tracking-widest text-rose-400 mb-2">Contras</p>
+                            <p class="text-sm text-white/70 leading-relaxed">precisa consistência, concorrência, nada “automático”</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Produtos -->
+                <div class="p-6 rounded-3xl bg-white/5 border border-white/10 hover:border-brand-pink/50 transition-colors group">
+                    <h3 class="text-xl font-bold mb-6 group-hover:text-brand-pink transition-colors">Produtos (Shopee/ML)</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <p class="text-[10px] font-bold uppercase tracking-widest text-emerald-400 mb-2">Prós</p>
+                            <p class="text-sm text-white/70 leading-relaxed">plataforma já tem clientes, valida rápido</p>
+                        </div>
+                        <div class="pt-4 border-t border-white/5">
+                            <p class="text-[10px] font-bold uppercase tracking-widest text-rose-400 mb-2">Contras</p>
+                            <p class="text-sm text-white/70 leading-relaxed">taxas, logística, concorrência por preço</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- E-commerce -->
+                <div class="p-6 rounded-3xl bg-white/5 border border-white/10 hover:border-brand-pink/50 transition-colors group">
+                    <h3 class="text-xl font-bold mb-6 group-hover:text-brand-pink transition-colors">E-commerce próprio</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <p class="text-[10px] font-bold uppercase tracking-widest text-emerald-400 mb-2">Prós</p>
+                            <p class="text-sm text-white/70 leading-relaxed">constrói marca, fideliza, controla o negócio</p>
+                        </div>
+                        <div class="pt-4 border-t border-white/5">
+                            <p class="text-[10px] font-bold uppercase tracking-widest text-rose-400 mb-2">Contras</p>
+                            <p class="text-sm text-white/70 leading-relaxed">você precisa gerar tráfego e marketing</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Gestor -->
+                <div class="p-6 rounded-3xl bg-white/5 border border-white/10 hover:border-brand-pink/50 transition-colors group">
+                    <h3 class="text-xl font-bold mb-6 group-hover:text-brand-pink transition-colors">Gestor de tráfego</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <p class="text-[10px] font-bold uppercase tracking-widest text-emerald-400 mb-2">Prós</p>
+                            <p class="text-sm text-white/70 leading-relaxed">bem pago, demanda alta, trabalha remoto</p>
+                        </div>
+                        <div class="pt-4 border-t border-white/5">
+                            <p class="text-[10px] font-bold uppercase tracking-widest text-rose-400 mb-2">Contras</p>
+                            <p class="text-sm text-white/70 leading-relaxed">pressão, testes constantes, responsabilidade com verba</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Vendas -->
+                <div class="p-6 rounded-3xl bg-white/5 border border-white/10 hover:border-brand-pink/50 transition-colors group">
+                    <h3 class="text-xl font-bold mb-6 group-hover:text-brand-pink transition-colors">Vendas online / SDR</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <p class="text-[10px] font-bold uppercase tracking-widest text-emerald-400 mb-2">Prós</p>
+                            <p class="text-sm text-white/70 leading-relaxed">habilidade serve pra tudo, muitas vagas, pode ser remoto</p>
+                        </div>
+                        <div class="pt-4 border-t border-white/5">
+                            <p class="text-[10px] font-bold uppercase tracking-widest text-rose-400 mb-2">Contras</p>
+                            <p class="text-sm text-white/70 leading-relaxed">rejeição, renda variável no início, exige comunicação</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How to use Section -->
+    <section class="py-24 px-4 bg-brand-pink/5 border-y border-brand-pink/10">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-16">Como usar este ebook <span class="text-white/40 block text-lg font-normal mt-2">(pra dar resultado de verdade)</span></h2>
+            
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="relative">
+                    <span class="text-6xl font-black text-white/5 absolute -top-8 -left-2">01</span>
+                    <p class="text-sm text-white/80 font-medium relative z-10 leading-relaxed">Leia a introdução e identifique seu perfil (serviço, venda ou conteúdo)</p>
+                </div>
+                <div class="relative">
+                    <span class="text-6xl font-black text-white/5 absolute -top-8 -left-2">02</span>
+                    <p class="text-sm text-white/80 font-medium relative z-10 leading-relaxed">Escolha 1 caminho pra testar por 30 dias</p>
+                </div>
+                <div class="relative">
+                    <span class="text-6xl font-black text-white/5 absolute -top-8 -left-2">03</span>
+                    <p class="text-sm text-white/80 font-medium relative z-10 leading-relaxed">Use as ferramentas sugeridas e monte um mini plano simples</p>
+                </div>
+                <div class="relative">
+                    <span class="text-6xl font-black text-white/5 absolute -top-8 -left-2">04</span>
+                    <p class="text-sm text-white/80 font-medium relative z-10 leading-relaxed">Pare de “pular de método” e foque em consistência</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What it is NOT Section -->
+    <section class="py-24 px-4">
+        <div class="max-w-3xl mx-auto p-10 rounded-[40px] bg-white/5 border border-white/10 relative overflow-hidden">
+            <div class="absolute top-0 right-0 p-4">
+                <i data-lucide="alert-circle" class="w-12 h-12 text-white/10"></i>
+            </div>
+            <h2 class="text-2xl font-bold mb-8">O que este ebook NÃO é <span class="text-white/40 text-sm font-normal block mt-1">(reduz reembolso)</span></h2>
+            <ul class="grid sm:grid-cols-2 gap-6 mb-10">
+                <li class="flex items-center gap-3 text-white/60 text-sm">
+                    <span class="w-1.5 h-1.5 rounded-full bg-white/20 shrink-0"></span>
+                    Não é promessa de dinheiro rápido
+                </li>
+                <li class="flex items-center gap-3 text-white/60 text-sm">
+                    <span class="w-1.5 h-1.5 rounded-full bg-white/20 shrink-0"></span>
+                    Não é método “automático”
+                </li>
+                <li class="flex items-center gap-3 text-white/60 text-sm">
+                    <span class="w-1.5 h-1.5 rounded-full bg-white/20 shrink-0"></span>
+                    Não substitui prática
+                </li>
+                <li class="flex items-center gap-3 text-white/60 text-sm">
+                    <span class="w-1.5 h-1.5 rounded-full bg-white/20 shrink-0"></span>
+                    Não é curso profissionalizante completo
+                </li>
+            </ul>
+            <p class="text-lg font-bold text-center p-6 rounded-2xl bg-white/5 border border-white/10">
+                Ele é um guia educativo: <span class="text-brand-pink">clareza, direção e visão real do mercado.</span>
+            </p>
+        </div>
+    </section>
+
+    <!-- Bonus Section -->
+    <section class="py-24 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/10 text-emerald-400 text-xs font-bold uppercase tracking-widest mb-8">
+                <i data-lucide="gift" class="w-4 h-4"></i> Bônus Exclusivos
+            </div>
+            <h2 class="text-3xl font-bold mb-12">Bônus do ebook:</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="p-6 rounded-2xl bg-white/5 border border-white/10 flex flex-col items-center gap-4">
+                    <div class="w-12 h-12 rounded-full bg-brand-pink/20 flex items-center justify-center">
+                        <i data-lucide="check-circle-2" class="w-6 h-6 text-brand-pink"></i>
+                    </div>
+                    <p class="text-sm font-bold text-white/80">Lista de ferramentas gratuitas e essenciais</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-white/5 border border-white/10 flex flex-col items-center gap-4">
+                    <div class="w-12 h-12 rounded-full bg-brand-pink/20 flex items-center justify-center">
+                        <i data-lucide="check-circle-2" class="w-6 h-6 text-brand-pink"></i>
+                    </div>
+                    <p class="text-sm font-bold text-white/80">Plataformas para encontrar clientes</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-white/5 border border-white/10 flex flex-col items-center gap-4">
+                    <div class="w-12 h-12 rounded-full bg-brand-pink/20 flex items-center justify-center">
+                        <i data-lucide="check-circle-2" class="w-6 h-6 text-brand-pink"></i>
+                    </div>
+                    <p class="text-sm font-bold text-white/80">Checklist do iniciante digital</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final Offer Section -->
+    <section id="checkout" class="py-32 px-4 relative overflow-hidden">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-2xl h-[400px] bg-brand-pink/20 blur-[120px] rounded-full -z-10"></div>
+        
+        <div class="max-w-2xl mx-auto text-center p-8 md:p-16 rounded-[48px] bg-white/5 border border-white/10 backdrop-blur-sm">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-[10px] font-bold uppercase tracking-widest mb-8 text-white/60">
+                <i data-lucide="shield-check" class="w-4 h-4 text-emerald-400"></i> Checkout Seguro & Transparente
+            </div>
+            
+            <h2 class="text-3xl md:text-5xl font-extrabold mb-4">Garanta seu acesso agora</h2>
+            <p class="text-white/60 mb-10 font-medium text-lg">O pagamento é processado na mesma página. <br class="hidden md:block"> Você não será redirecionado para outro site.</p>
+            
+            <div class="mb-12 p-8 rounded-3xl bg-white/5 border border-white/10">
+                <p class="text-sm text-white/40 line-through mb-1">De R$ 97</p>
+                <p class="text-7xl font-black text-white mb-2">R$ 25</p>
+                <p class="text-emerald-400 text-sm font-bold uppercase tracking-widest">Pagamento Único</p>
+            </div>
+
+            <div class="space-y-8">
+                <div class="flex justify-center w-full">
+                    <a onclick="return false;" href="https://pay.hotmart.com/E104617471T?checkoutMode=2" class="hotmart-fb hotmart__button-checkout group relative inline-flex items-center justify-center px-10 py-5 font-extrabold text-white transition-all duration-300 bg-gradient-to-r from-brand-pink to-brand-pinkLight rounded-2xl glow-pink hover:-translate-y-1 active:translate-y-0 w-full md:w-auto text-lg md:text-xl">
+                        <span class="relative flex items-center gap-2">
+                            Finalizar Compra Agora
+                            <i data-lucide="arrow-right" class="w-6 h-6 group-hover:translate-x-1 transition-transform"></i>
+                        </span>
+                    </a>
+                </div>
+                
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-4 pt-8 border-t border-white/10">
+                    <div class="flex flex-col items-center gap-2">
+                        <i data-lucide="shield-check" class="w-5 h-5 text-emerald-400"></i>
+                        <span class="text-[9px] font-bold uppercase tracking-widest text-white/40">Ambiente Seguro</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-2">
+                        <i data-lucide="zap" class="w-5 h-5 text-amber-400"></i>
+                        <span class="text-[9px] font-bold uppercase tracking-widest text-white/40">Acesso Imediato</span>
+                    </div>
+                    <div class="hidden md:flex flex-col items-center gap-2">
+                        <i data-lucide="clock" class="w-5 h-5 text-blue-400"></i>
+                        <span class="text-[9px] font-bold uppercase tracking-widest text-white/40">Acesso Vitalício</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-24 px-4 bg-white/[0.02]">
+        <div class="max-w-3xl mx-auto">
+            <div class="text-center mb-16">
+                <i data-lucide="help-circle" class="w-12 h-12 text-brand-pink mx-auto mb-4"></i>
+                <h2 class="text-3xl font-bold">Perguntas Frequentes</h2>
+            </div>
+
+            <div class="space-y-4" id="faq-container">
+                <!-- FAQ items will be enhanced by JS -->
+                <div class="faq-item rounded-2xl border border-white/10 bg-white/5 overflow-hidden">
+                    <button class="w-full p-6 text-left flex items-center justify-between hover:bg-white/5 transition-colors">
+                        <span class="font-bold text-white/90">1. É um curso?</span>
+                        <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-white/30 transition-transform"></i>
+                    </button>
+                    <div class="faq-content">
+                        <div class="px-6 pb-6 text-sm text-white/60 leading-relaxed">Não. É um ebook-guia educativo com visão prática e direção.</div>
+                    </div>
+                </div>
+                <div class="faq-item rounded-2xl border border-white/10 bg-white/5 overflow-hidden">
+                    <button class="w-full p-6 text-left flex items-center justify-between hover:bg-white/5 transition-colors">
+                        <span class="font-bold text-white/90">2. Vou ganhar dinheiro com isso?</span>
+                        <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-white/30 transition-transform"></i>
+                    </button>
+                    <div class="faq-content">
+                        <div class="px-6 pb-6 text-sm text-white/60 leading-relaxed">O ebook não promete resultados. Ele mostra possibilidades reais e como começar com consciência.</div>
+                    </div>
+                </div>
+                <div class="faq-item rounded-2xl border border-white/10 bg-white/5 overflow-hidden">
+                    <button class="w-full p-6 text-left flex items-center justify-between hover:bg-white/5 transition-colors">
+                        <span class="font-bold text-white/90">3. Serve pra quem não quer aparecer?</span>
+                        <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-white/30 transition-transform"></i>
+                    </button>
+                    <div class="faq-content">
+                        <div class="px-6 pb-6 text-sm text-white/60 leading-relaxed">Sim. Várias áreas não exigem exposição (design, edição, tráfego, SEO, sites).</div>
+                    </div>
+                </div>
+                <div class="faq-item rounded-2xl border border-white/10 bg-white/5 overflow-hidden">
+                    <button class="w-full p-6 text-left flex items-center justify-between hover:bg-white/5 transition-colors">
+                        <span class="font-bold text-white/90">4. Serve pra total iniciante?</span>
+                        <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-white/30 transition-transform"></i>
+                    </button>
+                    <div class="faq-content">
+                        <div class="px-6 pb-6 text-sm text-white/60 leading-relaxed">Sim. Linguagem simples e organizada.</div>
+                    </div>
+                </div>
+                <div class="faq-item rounded-2xl border border-white/10 bg-white/5 overflow-hidden">
+                    <button class="w-full p-6 text-left flex items-center justify-between hover:bg-white/5 transition-colors">
+                        <span class="font-bold text-white/90">5. É só sobre influencer?</span>
+                        <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-white/30 transition-transform"></i>
+                    </button>
+                    <div class="faq-content">
+                        <div class="px-6 pb-6 text-sm text-white/60 leading-relaxed">Não. Mostra profissões e modelos de trabalho além disso.</div>
+                    </div>
+                </div>
+                <div class="faq-item rounded-2xl border border-white/10 bg-white/5 overflow-hidden">
+                    <button class="w-full p-6 text-left flex items-center justify-between hover:bg-white/5 transition-colors">
+                        <span class="font-bold text-white/90">6. Como recebo?</span>
+                        <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-white/30 transition-transform"></i>
+                    </button>
+                    <div class="faq-content">
+                        <div class="px-6 pb-6 text-sm text-white/60 leading-relaxed">PDF com acesso imediato pela Hotmart.</div>
+                    </div>
+                </div>
+                <div class="faq-item rounded-2xl border border-white/10 bg-white/5 overflow-hidden">
+                    <button class="w-full p-6 text-left flex items-center justify-between hover:bg-white/5 transition-colors">
+                        <span class="font-bold text-white/90">7. Posso ler no celular?</span>
+                        <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-white/30 transition-transform"></i>
+                    </button>
+                    <div class="faq-content">
+                        <div class="px-6 pb-6 text-sm text-white/60 leading-relaxed">Sim.</div>
+                    </div>
+                </div>
+                <div class="faq-item rounded-2xl border border-white/10 bg-white/5 overflow-hidden">
+                    <button class="w-full p-6 text-left flex items-center justify-between hover:bg-white/5 transition-colors">
+                        <span class="font-bold text-white/90">8. Tem ferramentas e exemplos?</span>
+                        <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-white/30 transition-transform"></i>
+                    </button>
+                    <div class="faq-content">
+                        <div class="px-6 pb-6 text-sm text-white/60 leading-relaxed">Sim. Cada área tem ferramentas e direcionamento prático.</div>
+                    </div>
+                </div>
+                <div class="faq-item rounded-2xl border border-white/10 bg-white/5 overflow-hidden">
+                    <button class="w-full p-6 text-left flex items-center justify-between hover:bg-white/5 transition-colors">
+                        <span class="font-bold text-white/90">9. Tem prós e contras?</span>
+                        <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-white/30 transition-transform"></i>
+                    </button>
+                    <div class="faq-content">
+                        <div class="px-6 pb-6 text-sm text-white/60 leading-relaxed">Sim. O ebook mostra o lado bom e o lado difícil de cada caminho.</div>
+                    </div>
+                </div>
+                <div class="faq-item rounded-2xl border border-white/10 bg-white/5 overflow-hidden">
+                    <button class="w-full p-6 text-left flex items-center justify-between hover:bg-white/5 transition-colors">
+                        <span class="font-bold text-white/90">10. Por onde eu começo?</span>
+                        <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-white/30 transition-transform"></i>
+                    </button>
+                    <div class="faq-content">
+                        <div class="px-6 pb-6 text-sm text-white/60 leading-relaxed">Você vai sair com um caminho claro pra escolher 1 área e testar.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-4 border-t border-white/5 text-center">
+        <div class="max-w-2xl mx-auto">
+            <p class="text-[10px] text-white/30 leading-relaxed uppercase tracking-widest">
+                Este material é educativo e não garante resultados financeiros. Resultados variam de pessoa para pessoa conforme dedicação, contexto e execução.
+            </p>
+            <p class="mt-8 text-[10px] text-white/20">
+                © <span id="year"></span> As Profissões da Internet. Todos os direitos reservados.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Extra space for sticky mobile CTA -->
+    <div class="h-24 md:hidden"></div>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        lucide.createIcons();
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // FAQ Toggle Logic
+        document.querySelectorAll('.faq-item button').forEach(button => {
+            button.addEventListener('click', () => {
+                const item = button.parentElement;
+                const isActive = item.classList.contains('active');
+                
+                // Close all other items
+                document.querySelectorAll('.faq-item').forEach(otherItem => {
+                    otherItem.classList.remove('active');
+                });
+
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+    </script>
+
+    <!-- Hotmart Checkout Widget -->
+    <script type="text/javascript">
+        function importHotmart(){ 
+            var imported = document.createElement('script'); 
+            imported.src = 'https://static.hotmart.com/checkout/widget.min.js'; 
+            document.head.appendChild(imported); 
+            var link = document.createElement('link'); 
+            link.rel = 'stylesheet'; 
+            link.type = 'text/css'; 
+            link.href = 'https://static.hotmart.com/css/hotmart-fb.min.css'; 
+            document.head.appendChild(link);
+        }
+        importHotmart();
+    </script>
+</body>
+</html>
